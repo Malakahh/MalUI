@@ -1,0 +1,20 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <Script file="LibStub\LibStub.lua" />
+
+    <Script file="Init.lua" />
+    <Script file="Helper.lua" />
+
+    <!--Dialog-->
+    <Script file="DialogMessage.lua" />
+
+    <!--DropDown-->
+    <Script file="DropDown\DropDown.lua" />
+    <Script file="DropDown\MenuEntry.lua" />
+    <Script file="DropDown\WidgetFactory.lua" />
+    <Script file="DropDown\Item.lua" />
+    <Script file="DropDown\Section.lua" />
+    <Script file="DropDown\Menu.lua" />
+
+    <!--ProfileManager-->
+    <Script file="ProfileManager.lua" />
+</Ui>
