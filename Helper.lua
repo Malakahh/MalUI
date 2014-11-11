@@ -22,7 +22,7 @@ function lib.Helper.RotateTexture(texture, angle)
     texture:SetTexCoord(0.5-tx, 0.5-ty, 0.5+tx2, 0.5+ty2, 0.5-tx2, 0.5-ty2, 0.5+tx, 0.5+ty)
 end
 
-function lib.Helper.HexColorToColor(color)
+function lib.Helper.AlphaHexColorToColor(color)
     local r, g, b, a
 
     a = bit.band(color, 0xFF) / 255
@@ -31,6 +31,16 @@ function lib.Helper.HexColorToColor(color)
     r = bit.band(bit.rshift(color, 6*4), 0xFF) / 255
 
     return r,g,b,a
+end
+
+function lib.Helper.HexColorToColor(color)
+    local r, g, b
+
+    b = bit.band(color, 0xFF) / 255
+    g = bit.band(bit.rshift(color, 2*4), 0xFF) / 255
+    r = bit.band(bit.rshift(color, 4*4), 0xFF) / 255
+
+    return r,g,b
 end
 
 function lib.Helper.CommaValue(amount)
